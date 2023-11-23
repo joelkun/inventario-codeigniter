@@ -85,7 +85,7 @@ class Product extends BaseController
 
         $img = $this->request->getFile('imagen');
         $post = $this->validator->getValidated();
-        $descripcion = isset($post['descripcion']) ? $post['descripcion'] : '';
+        $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
 
         if ($img->isValid() && !$img->hasMoved()) {
 
@@ -120,21 +120,6 @@ class Product extends BaseController
         } else {
             return redirect()->to(base_url() . 'product/create')->with('mensaje', '0');
         }
-
-        /*$db = \Config\Database::connect();
-        $condicion =['estado' => 1, 'stock >' =>5];
-
-        $query = $db->table('product')
-        ->select('nombre, descripcion')
-        ->where('estado',1)
-        ->where('stock >',5)
-        ->where($condicion)
-        ->orderBy('sku','asc')
-        ->limit(1)
-        ->get(); //AND
-
-        $resultado = $query->getResult();
-        echo $db->getLastQuery();*/
     }
 
     public function edit($id)
