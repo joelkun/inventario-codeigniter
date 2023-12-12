@@ -17,7 +17,7 @@
             <?php foreach ($productos as $producto) : ?>
                 <div class="col-sm-4 pt-5">
                     <div class="card col p-0 me-3">
-                        <img class="card-img-top img-fluid w-75 mx-auto" src="<?= base_url() ?>uploads/img/<?= $producto['imagen'] ?>">
+                        <img class="card-img-top img-fluid w-75 mx-auto" src="http://localhost/candidatos/jvillon/inventario-codeigniter/public/uploads/img/<?= $producto['imagen'] ?>">
                         <div class="card-body">
                             <p><strong>SKU:</strong><?php echo $producto['sku'] ?></p>
                             <h3 class="card-title"><?php echo $producto['nombre'] ?></h3>
@@ -107,6 +107,6 @@
 
 <?php echo $this->endSection(); ?>
 <?php echo $this->section('scripts'); ?>
-<script src="<?php echo base_url(); ?>js/search.js"></script>
-<script src="<?php echo base_url(); ?>js/modal.js"></script>
+<script src="http://localhost/candidatos/jvillon/inventario-codeigniter/public/js/search.js"></script>
+<script src="http://localhost/candidatos/jvillon/inventario-codeigniter/public/js/modal.js"></script>
 <?php echo $this->endSection(); ?>

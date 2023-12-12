@@ -10,7 +10,7 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>product/create">Crear Producto<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>product/edit">Editar Producto</a>
+                <a class="nav-link" href="#">Editar Producto</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

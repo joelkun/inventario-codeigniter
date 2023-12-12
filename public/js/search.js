@@ -1,4 +1,5 @@
-const base_url = "http://localhost:8080/";
+const base_url =
+  "http://localhost/candidatos/jvillon/inventario-codeigniter/public/";
 function delay(callback, ms) {
   var timer = 0;
   return function () {
@@ -19,7 +20,9 @@ $("input#search").keyup(
     //const throwawayNode = parent.removeChild(child);
 
     $.ajax({
-      url: "http://localhost:8080/product/find/" + search,
+      url:
+        "http://localhost/candidatos/jvillon/inventario-codeigniter/public/index.php/product/find/" +
+        search,
       type: "GET",
       dataType: "json",
       success: function (data) {
